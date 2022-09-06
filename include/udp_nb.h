@@ -18,7 +18,7 @@ class UDP_Non_Blocking
     public:
         UDP_Non_Blocking();
         void initialise(uint16_t port);
-		uint32_t UDPPacketRecieverFromDeviceToBuffer(unsigned char * buffer, int maxBufferLength);
+	uint32_t UDPPacketReciever(unsigned char * buffer, int maxBufferLength);
         ~UDP_Non_Blocking();
 };
 
