@@ -38,7 +38,7 @@ void UDP_Non_Blocking::initialise(uint16_t port)
 	setsockopt(soc_udp, SOL_SOCKET, SO_RCVTIMEO, (char *)&dw, sizeof(dw));
 }
 
-uint32_t UDP_Non_Blocking::UDPPacketRecieverFromDeviceToBuffer(unsigned char * buffer, int maxBufferLength)
+uint32_t UDP_Non_Blocking::UDPPacketReciever(unsigned char * buffer, int maxBufferLength)
 {
 	int size = sizeof(destination);
 	//int result = recv(soc_udp, (char *)buffer, maxBufferLength, 0); //if needed
