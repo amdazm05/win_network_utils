@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(UDP_NB)
+add_library(udp_nb STATIC ${PROJECT_SOURCE_DIR}/src/udp_nb.cpp)
+target_include_directories(udp_nb PUBLIC ${PROJECT_SOURCE_DIR}/include)
+add_executable(main ${PROJECT_SOURCE_DIR}/example/main.cpp )
+target_link_libraries(main PUBLIC udp_nb wsock32)
